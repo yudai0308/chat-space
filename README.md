@@ -22,8 +22,8 @@
 |user_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :massage
-- belongs_to :member
+- belongs_to :user
+- belongs_to :group
 
 ***
 
