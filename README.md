@@ -18,7 +18,6 @@
 |------|----|-------|
 |body|text|check(body != null or image != null)|
 |image|string|check(body != null or image != null)|
-|date|integer|null: false|
 |group_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
 
@@ -37,7 +36,7 @@
 ### Association
 - has_many :massages
 - has_many :members
-- has_many :massages, through: :members
+- has_many :users, through: :members
 
 ***
 
