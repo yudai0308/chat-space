@@ -8,6 +8,7 @@
 ### Association
 - has_many :massages
 - has_many :members
+- has_many :groups, through: :members
 
 ***
 
@@ -36,6 +37,7 @@
 ### Association
 - has_many :massages
 - has_many :members
+- has_many :massages, through: :members
 
 ***
 
