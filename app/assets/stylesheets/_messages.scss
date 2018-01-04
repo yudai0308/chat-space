@@ -1,0 +1,60 @@
+html, body {
+  height: 100%;
+  width: 100vw;
+}
+
+.contents {
+  height: 100%;
+  width: 100vw;
+}
+
+.side-bar {
+  float: left;
+  height: 100%;
+  width: 300px;
+  color: white;
+
+  .user-info {
+    background-color: #253141;
+    height: 100px;
+    width: 300px;
+    padding: 0px 20px;
+  }
+
+  .group-info {
+    background-color: #2f3e51;
+    height: calc(100% - 100px);
+    width: 300px;
+    padding: 0px 20px;
+  }
+}
+
+.main-contents {
+  float: left;
+  height: 100%;
+  width: $right-width;
+
+  .current-group {
+    background-color: beige;
+    height: 100px;
+    width: $right-width;
+    padding: 0px 40px;
+  }
+
+  .posted-message {
+    background-color: #F2F2F2;
+    height: calc(100% - 170px);
+    width: $right-width;
+    padding: 0px 40px;
+  }
+
+  .post-message {
+    background-color: #BDBDBD;
+    height: 70px;
+    width: $right-width;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 0px 40px;
+  }
+}
