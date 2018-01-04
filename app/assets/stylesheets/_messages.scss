@@ -12,13 +12,30 @@ html, body {
   float: left;
   height: 100%;
   width: 300px;
-  color: white;
+  color: #FFFFFF;
 
   .user-info {
     background-color: #253141;
     height: 100px;
     width: 300px;
     padding: 0px 20px;
+
+    .user-name {
+      height: 100px;
+      width: 220px;
+      float: left;
+      line-height: 100px;
+      font-weight: bold;
+    }
+
+    .editing {
+      height: 100px;
+      width: 80px;
+      float: left;
+      background-color: green;
+      line-height: 100px;
+      font-size: 20px;
+    }
   }
 
   .group-info {
@@ -26,6 +43,25 @@ html, body {
     height: calc(100% - 100px);
     width: 300px;
     padding: 0px 20px;
+
+    .created-group {
+      height: 91px;
+      width: 260px;
+      background-color: wheat;
+
+      ul.group-list {
+        padding: 20px 0;
+
+        li.group-name {
+          font-size: 15px;
+          margin-bottom: 5px;
+        }
+
+        li.current-comment {
+          font-size: 11px;
+        }
+      }
+    }
   }
 }
 
@@ -46,6 +82,7 @@ html, body {
     height: calc(100% - 170px);
     width: $right-width;
     padding: 0px 40px;
+    border-top: solid 2px #eeeeee;
   }
 
   .post-message {

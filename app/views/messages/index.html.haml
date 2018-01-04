@@ -1,10 +1,16 @@
 .contents
   .side-bar
     .user-info
-      %p ユーザーネーム
+      .user-name
+        %p ユーザーネーム
+      %ul.editing
+        %i.fa.fa-pencil-square-o
+        %i.fa.fa-cog
     .group-info
-      %p グループネーム
-      %p 最新コメント
+      .created-group
+        %ul.group-list
+          %li.group-name グループネーム
+          %li.current-comment 最新コメント
   .main-contents
     .current-group
       %p サンプルグループ
