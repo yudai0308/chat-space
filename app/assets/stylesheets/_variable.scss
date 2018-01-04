@@ -1,0 +1,9 @@
+$right-width: calc(100vw - 300px);
+
+$windth_01: 0px;
+$windth_01: 20px;
+$windth_01: 40px;
+
+@mixin padding($width01, $width02) {
+  padding: $width01 $width02;
+}
