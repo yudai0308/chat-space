@@ -3,20 +3,39 @@
     .user-info
       .user-name
         %p ユーザーネーム
-      %ul.editing
+      .editing
         %i.fa.fa-pencil-square-o
         %i.fa.fa-cog
     .group-info
       .created-group
         %ul.group-list
-          %li.group-name グループネーム
-          %li.current-comment 最新コメント
+          %li.group-list__name グループネーム
+          %li.group-list__comment 最新コメント
   .main-contents
     .current-group
-      %p サンプルグループ
-      %p Member: watanabe
-    .posted-message
-      %p ユーザーネーム  2017/01/01 08:00:00
-      %p コメント
+      %ul.current-group__info
+        %li.current-group__name サンプルグループ
+        %li.current-group__mem Member: watanabe
+      .current-group__edit
+        %p Edit
+    .message-contents
+      %ul.posted-message
+        %ul.message-info
+          %li.message-info__name watanabe
+          %li.message-info__date 2017/01/01 08:00:00
+        %li.posted-message__content なるほど
+        %ul.message-info
+          %li.message-info__name tanaka
+          %li.message-info__date 2017/01/01 09:00:00
+        %li.posted-message__content すごい
+        %ul.message-info
+          %li.message-info__name suzuki
+          %li.message-info__date 2017/01/01 10:00:00
+        %li.posted-message__content よっしゃ
     .post-message
-      %p post a message
+      %form.message-form
+        %input.message-form__text{type: :text, placeholder: "type a message"}
+        %label.image-form
+          %i.fa.fa-picture-o
+          %input.image-form__btn{type: :file}
+        %input.message-form__send{type: :submit, value: "Send"}

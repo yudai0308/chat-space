@@ -52,12 +52,12 @@ html, body {
       ul.group-list {
         padding: 20px 0;
 
-        li.group-name {
+        li.group-list__name {
           font-size: 15px;
           margin-bottom: 5px;
         }
 
-        li.current-comment {
+        li.group-list__comment {
           font-size: 11px;
         }
       }
@@ -75,23 +75,121 @@ html, body {
     height: 100px;
     width: $right-width;
     padding: 0px 40px;
+    position: relative;
   }
 
-  .posted-message {
+    ul.current-group__info {
+    }
+
+      li.current-group__name {
+        font-size: 20px;
+        color: #333333;
+        padding-top: 30px;
+        margin-bottom: 12px;
+      }
+
+      li.current-group__mem {
+        font-size: 12px;
+        color: #999999;
+      }
+
+      .current-group__edit {
+        height: 40px;
+        width: 65px;
+        top: 28px;
+        right: 40px;
+        position: absolute;
+        line-height: 40px;
+        text-align: center;
+        border: solid 2px #38AEF0;
+        color: #38AEF0;
+      }
+
+  .message-contents {
     background-color: #F2F2F2;
     height: calc(100% - 170px);
     width: $right-width;
-    padding: 0px 40px;
+    padding: 46px 40px 0px 40px;
     border-top: solid 2px #eeeeee;
+
+    ul.posted-message {
+    }
+
+      ul.message-info li {
+        display: inline;
+      }
+
+        li.message-info__name {
+          font-size: 16px;
+          font-weight: bold;
+          color: #434A54;
+        }
+
+        li.message-info__date {
+          font-size: 12px;
+          color: #999999;
+          margin-left: 10px;
+        }
+
+      li.posted-message__content {
+        font-size: 14px;
+        color: #434A54;
+        margin-top: 10px;
+        margin-bottom: 40px;
+      }
   }
 
   .post-message {
-    background-color: #BDBDBD;
-    height: 70px;
+    background-color: #dcdcdc;
+    height: 90px;
     width: $right-width;
     position: fixed;
     bottom: 0;
     right: 0;
     padding: 0px 40px;
   }
+
+    .message-form {
+    }
+
+      input.message-form__text {
+        height: 50px;
+        width: calc(100% - 110px);
+        margin: 20px 0px;
+        display: inline-block;
+        padding-left: 10px;
+        font-size: 16px;
+        color: #434A54;
+      }
+
+        i.fa {
+          font-size: 20px;
+          cursor: pointer;
+          border: none;
+          width: 36px;
+          height: 45px;
+          line-height: 45px;
+          text-align: center;
+          position: relative;
+          left: -42px;
+        }
+
+        input.image-form__btn {
+          display: none;
+        }
+
+    input.message-form__send {
+      height: 50px;
+      width: 100px;
+      background-color: pink;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      background-color: #38AEF0;
+      color: white;
+    }
 }
+
+
+
+
