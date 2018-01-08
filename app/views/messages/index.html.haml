@@ -12,11 +12,11 @@
           %li.group-list__name グループネーム
           %li.group-list__comment 最新コメント
   .main-contents
-    .current-group
-      %ul.current-group__info
+    .main-header
+      %ul.current-group
         %li.current-group__name サンプルグループ
         %li.current-group__mem Member: watanabe
-      .current-group__edit
+      .group-edit
         = link_to "Edit", "/", class: "edit-btn"
     .message-contents
       %ul.posted-message
