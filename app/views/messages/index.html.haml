@@ -2,10 +2,11 @@
   .side-bar
     .user-info
       .user-name
-        %p ユーザーネーム
+        %p
+          = current_user.name
       .editing
         = link_to "", "/", class: "create-group fa-pencil-square-o"
-        = link_to "", "/", class: "edit-acount fa-cog"
+        = link_to "", "/users/:id/edit", class: "edit-acount fa-cog"
     .group-info
       .created-group
         %ul.group-list
