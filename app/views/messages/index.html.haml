@@ -1,24 +1,25 @@
 .contents
-  .side-bar
-    .user-info
-      .user-name
-        %p
-          = current_user.name
-      .editing
-        = link_to "", "groups#new", class: "create-group fa-pencil-square-o"
-        = link_to "", "devise/registrations#edit", class: "edit-acount fa-cog"
-    .group-info
-      .created-group
-        %ul.group-list
-          %li.group-list__name グループネーム
-          %li.group-list__comment 最新コメント
+  = render "shared/side_bar"
+  -# .side-bar
+  -#   .user-info
+  -#     .user-name
+  -#       %p
+  -#         = current_user.name
+  -#     .editing
+  -#       = link_to "", "/groups/new", class: "create-group fa-pencil-square-o"
+  -#       = link_to "", "/users/:id/edit", class: "edit-acount fa-cog"
+  -#   .group-info
+  -#     .created-group
+  -#       %ul.group-list
+  -#         %li.group-list__name グループネーム
+  -#         %li.group-list__comment 最新コメント
   .main-contents
     .main-header
       %ul.current-group
         %li.current-group__name サンプルグループ
         %li.current-group__mem Member: watanabe
       .group-edit
-        = link_to "Edit", "groups#edit", class: "edit-btn"
+        = link_to "Edit", "/groups/:id/edit", class: "edit-btn"
     .message-contents
       %ul.posted-message
         %ul.message-info
