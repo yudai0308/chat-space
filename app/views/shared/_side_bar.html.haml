@@ -4,8 +4,8 @@
       %p
         = current_user.name
     .editing
-      = link_to "", "/groups/new", class: "create-group fa-pencil-square-o"
-      = link_to "", "/users/:id/edit", class: "edit-acount fa-cog"
+      = link_to "", new_group_path, class: "create-group fa-pencil-square-o"
+      = link_to "", edit_user_path(current_user), class: "edit-acount fa-cog"
   .group-info
     .created-group
       - current_user.groups.each do |group|

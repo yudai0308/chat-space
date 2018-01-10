@@ -19,7 +19,7 @@
         %li.current-group__name サンプルグループ
         %li.current-group__mem Member: watanabe
       .group-edit
-        = link_to "Edit", "/groups/:id/edit", class: "edit-btn"
+        = link_to "Edit", edit_group_path(current_user.groups), class: "edit-btn"
     .message-contents
       %ul.posted-message
         %ul.message-info
