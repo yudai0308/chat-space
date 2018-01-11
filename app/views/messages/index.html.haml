@@ -10,17 +10,17 @@
     .message-contents
       %ul.posted-message
         %ul.message-info
-          %li.message-info__name watanabe
-          %li.message-info__date 2017/01/01 08:00:00
-        %li.posted-message__content なるほど
-        %ul.message-info
-          %li.message-info__name tanaka
-          %li.message-info__date 2017/01/01 09:00:00
-        %li.posted-message__content すごい
-        %ul.message-info
-          %li.message-info__name suzuki
-          %li.message-info__date 2017/01/01 10:00:00
-        %li.posted-message__content よっしゃ
+          %li.message-info__name a
+          %li.message-info__date a
+        %li.posted-message__content a
+        -# %ul.message-info
+        -#   %li.message-info__name tanaka
+        -#   %li.message-info__date 2017/01/01 09:00:00
+        -# %li.posted-message__content すごい
+        -# %ul.message-info
+        -#   %li.message-info__name suzuki
+        -#   %li.message-info__date 2017/01/01 10:00:00
+        -# %li.posted-message__content よっしゃ
     .post-message
       %form.message-form
         %input.message-form__text{type: :text, placeholder: "type a message"}
@@ -28,3 +28,14 @@
           %i.fa.fa-picture-o
           %input.image-form__btn{type: :file}
         %input.message-form__send{type: :submit, value: "Send"}
+
+      -# .message-form
+      -#   = form_for [@group, @message] do |f|
+      -#     = f.text_field :content, class: "message-form__text", placeholder: "type a message"
+      -#     = f.label :image, class: "image-form" do
+      -#       %i.fa.fa-picture-o
+      -#       = f.file_field :image, class: "image-form__btn"
+      -#     = f.submit "send", class: "message-form__send"
+
+
+
