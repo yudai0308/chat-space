@@ -1,23 +1,12 @@
 .contents
-  .side-bar
-    .user-info
-      .user-name
-        %p ユーザーネーム
-      .editing
-        = link_to "", "/", class: "create-group fa-pencil-square-o"
-        = link_to "", "/", class: "edit-acount fa-cog"
-    .group-info
-      .created-group
-        %ul.group-list
-          %li.group-list__name グループネーム
-          %li.group-list__comment 最新コメント
+  = render "shared/side_bar"
   .main-contents
     .main-header
       %ul.current-group
         %li.current-group__name サンプルグループ
         %li.current-group__mem Member: watanabe
       .group-edit
-        = link_to "Edit", "/", class: "edit-btn"
+        = link_to "Edit", edit_group_path(current_user.groups), class: "edit-btn"
     .message-contents
       %ul.posted-message
         %ul.message-info

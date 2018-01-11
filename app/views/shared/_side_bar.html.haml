@@ -1,0 +1,15 @@
+.side-bar
+  .user-info
+    .user-name
+      %p
+        = current_user.name
+    .editing
+      = link_to "", new_group_path, class: "create-group fa-pencil-square-o"
+      = link_to "", edit_user_path(current_user), class: "edit-acount fa-cog"
+  .group-info
+    .created-group
+      - current_user.groups.each do |group|
+        =link_to group_messages_path(group) do
+          %ul.group-list
+            %li.group-list__name= group.name
+            %li.group-list__comment メッセージはまだありません
