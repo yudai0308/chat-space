@@ -16,7 +16,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|check(body != null or image != null)|
+|content|string|check(body != null or image != null)|
 |image|string|check(body != null or image != null)|
 |group_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
