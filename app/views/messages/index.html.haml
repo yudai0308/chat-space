@@ -7,12 +7,12 @@
         %li.current-group__mem Member: watanabe
       .group-edit
         = link_to "Edit", edit_group_path(current_user.groups), class: "edit-btn"
+
     .message-contents
       .posted-message
+        = render @messages
         - @messages.each do |message|
-          .posted-message__user= message.user.name
-          .posted-message__date= message.created_at
-          .posted-message__content= message.content
+          = render partial: "message", locals: {message: message}
 
     .post-message
       .message-form
