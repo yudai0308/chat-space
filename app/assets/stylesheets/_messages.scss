@@ -22,12 +22,13 @@ a:active { color:$blue; text-decoration:none }
   .user-info {
     background-color: $dark-navy;
     height: 100px;
-    width: $side-width;
-    padding: 0px 20px;
+    padding-left: 20px;
+    // position: fixed;
+    z-index: 1;
 
     .user-name {
       height: 100px;
-      width: 220px;
+      width: 200px;
       float: left;
       line-height: 100px;
       font-weight: bold;
@@ -39,6 +40,7 @@ a:active { color:$blue; text-decoration:none }
       float: left;
       line-height: 100px;
       font-size: 20px;
+      text-align: center;
     }
 
       a.create-group.fa-pencil-square-o::before {
@@ -62,14 +64,18 @@ a:active { color:$blue; text-decoration:none }
     background-color: $light-navy;
     height: calc(100% - 100px);
     width: $side-width;
-    padding: 0px 20px;
+    // position: relative;
+    // top: 100px;
+    z-index: 0;
+    overflow: scroll;
 
     .created-group {
-      height: 91px;
-      width: 260px;
+      height: 90px;
+      width: 300px;
+      // position: fixed;
 
       .group-list {
-        padding: 20px 0;
+        padding: 20px 20px 20px 20px;
 
         &__name {
           font-size: 15px;
@@ -94,7 +100,7 @@ a:active { color:$blue; text-decoration:none }
     height: 100px;
     width: $right-width;
     padding: 0px 40px;
-    position: relative;
+    position: fixed;
     min-width: 400px;
   }
 
@@ -137,13 +143,18 @@ a:active { color:$blue; text-decoration:none }
 
   .message-contents {
     background-color: #F2F2F2;
-    height: calc(100% - 170px);
+    height: 100%;
     width: $right-width;
-    padding: 46px 40px 0px 40px;
+    padding: 20px 40px 0px 40px;
     border-top: solid 2px #eeeeee;
     min-width: 400px;
+    overflow: scroll;
 
     .posted-message {
+      position: relative;
+      top: 100px;
+      height: 100%;
+      overflow: scroll;
 
       &__user {
         font-size: 16px;
@@ -165,9 +176,7 @@ a:active { color:$blue; text-decoration:none }
       &__content {
         font-size: 14px;
         color: $comment_color;
-        margin-top: 10px;
-        margin-bottom: 40px;
-        padding-top: 10px;
+        padding: 10px 0px 30px 0px;
         clear: both;
       }
     }

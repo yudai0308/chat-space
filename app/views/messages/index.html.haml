@@ -11,8 +11,8 @@
     .message-contents
       .posted-message
         = render @messages
-        - @messages.each do |message|
-          = render partial: "message", locals: {message: message}
+        -# - @messages.each do |message|
+        -#   = render partial: "message", locals: {message: message}
 
     .post-message
       .message-form
