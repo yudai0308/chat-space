@@ -9,17 +9,10 @@
         = link_to "Edit", edit_group_path(current_user.groups), class: "edit-btn"
     .message-contents
       .posted-message
-        .posted-message__user ikachan
-        .posted-message__date 2018/1/10
-        .posted-message__content アイウエオ
-      -#   %ul.message-info
-      -#     %li.message-info__name tanaka
-      -#     %li.message-info__date 2017/01/01 09:00:00
-      -#   %li.posted-message__content すごい
-      -#   %ul.message-info
-      -#     %li.message-info__name suzuki
-      -#     %li.message-info__date 2017/01/01 10:00:00
-      -#   %li.posted-message__content よっしゃ
+        - @messages.each do |message|
+          .posted-message__user= message.user.name
+          .posted-message__date= message.created_at
+          .posted-message__content= message.content
 
     .post-message
       .message-form
@@ -29,6 +22,3 @@
             %i.fa.fa-picture-o
             = f.file_field :image, class: "image-form__btn"
           = f.submit "send", class: "message-form__send"
-
-
-
