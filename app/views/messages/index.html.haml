@@ -6,13 +6,12 @@
         %li.current-group__name サンプルグループ
         %li.current-group__mem Member: watanabe
       .group-edit
-        = link_to "Edit", edit_group_path(current_user.groups), class: "edit-btn"
+        = link_to "Edit", edit_group_path(@group), class: "edit-btn"
 
     .message-contents
-      .posted-message
-        = render @messages
-        -# - @messages.each do |message|
-        -#   = render partial: "message", locals: {message: message}
+      = render @messages
+      -# - @messages.each do |message|
+      -#   = render partial: "message", locals: {message: message}
 
     .post-message
       .message-form
