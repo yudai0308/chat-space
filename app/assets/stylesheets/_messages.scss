@@ -45,7 +45,6 @@ a:active { color:$blue; text-decoration:none }
       a.create-group.fa-pencil-square-o::before {
         display: inline-block;
         font-family: fontawesome;
-        background-color: yellow;
         height: 0px;
         color: $white;
       }
@@ -91,52 +90,42 @@ a:active { color:$blue; text-decoration:none }
   height: 100%;
   width: $right-width;
 
-  .main-header {
+  .current-group {
     background-color: #FFFFFF;
-    height: 100px;
-    width: $right-width;
+    height: calc(100px - 30px);
+    width: calc($right-width - 80px);
     min-width: 400px;
+    padding: 30px 40px 0px 40px;
     z-index: 1;
-  }
 
-    .current-group {
-      padding-left: 40px;
-      height: 100px;
-
-      &__name {
-        font-size: 20px;
-        color: #333333;
-        padding-top: 30px;
-        padding-bottom: 12px;
-      }
-
-      &__mem {
-        font-size: 12px;
-        color: $light-gray;
-      }
+    &__name {
+      font-size: 20px;
+      color: #333333;
+      float: left;
     }
 
-    .group-edit {
-      // position: relative;
-      position: absolute;
-      height: 40px;
-      width: 65px;
-      top: 28px;
-      right: 40px;
+    &__btn {
+      display: block;
       line-height: 40px;
       text-align: center;
       border: solid 2px $blue;
       color: $blue;
+      float: right;
+      width: 60px;
+      height: 40px;
+      text-decoration:none;
     }
 
-      a.edit-btn {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0px;
-        left: 0px;
-        text-decoration:none;
-      }
+    &__member {
+      font-size: 12px;
+      color: $light-gray;
+      clear: both;
+    }
+
+    &__member li {
+      display: inline-block;
+    }
+  }
 
   .message-contents {
     border-top: solid 2px #eeeeee;

@@ -1,12 +1,16 @@
 .contents
   = render "shared/side_bar"
   .main-contents
-    .main-header
-      %ul.current-group
-        %li.current-group__name サンプルグループ
-        %li.current-group__mem Member: watanabe
-      .group-edit
-        = link_to "Edit", edit_group_path(@group), class: "edit-btn"
+    .current-group
+      -# %ul.current-group
+      %p.current-group__name= @group.name
+      = link_to "Edit", edit_group_path(@group), class: "current-group__btn"
+      %ul.current-group__member
+        %li Member:
+        - @group.users.each do |mem|
+          %li= mem.name
+        -# %li.current-group__name サンプルグループ
+        -# %li.current-group__mem Member: watanabe
 
     .message-contents
       = render @messages
