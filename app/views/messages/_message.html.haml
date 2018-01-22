@@ -1,3 +1,9 @@
 %p.message-contents__user= message.user.name
 %p.message-contents__date= message.created_at
-%p.message-contents__content= message.content
+- if message.image.present? == true && message.content.present? == false
+  %img.message-contents__image{src: "#{message.image}"}
+- elsif message.image.present? == false && message.content.present? == true
+  %p.message-contents__content= message.content
+-else
+  %img.message-contents__image{src: "#{message.image}"}
+  %p.message-contents__content= message.content
