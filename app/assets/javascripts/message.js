@@ -43,7 +43,6 @@ $(document).on("turbolinks:load", function() {
       alert("メッセージを入力するか画像を選択してください。");
     });
     var windowHeight = $(".message-contents").get(0).scrollHeight;
-    console.log(windowHeight);
     $(".message-contents").animate({scrollTop: windowHeight}, 200, "swing");
   });
 });
