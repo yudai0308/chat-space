@@ -14,7 +14,7 @@ $(document).on("turbolinks:load", function() {
                     <p class="message-contents__date">${ message.date }</p>
                     <img class="message-contents__image" src="${message.image.url}"></img>`
     };
-  return html;
+    return html;
   };
 
   $("#new_message").on("submit", function(e) {
