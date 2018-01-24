@@ -1,4 +1,4 @@
-.each-message
+.each-message{ "data-message-id": "#{message.id}" }
   %p.each-message__user= message.user.name
   %p.each-message__date= message.created_at
   - if message.image.present? == true && message.content.present? == false
