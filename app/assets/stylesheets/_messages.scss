@@ -138,35 +138,38 @@ a:active { color:$blue; text-decoration:none }
     position: relative;
     z-index: 0;
 
-    &__user {
-      font-size: 16px;
-      font-weight: bold;
-      color: $comment_color;
-      display: inline;
-      float: left;
-    }
+    .each-message {
 
-    &__date {
-      font-size: 12px;
-      color: $light-gray;
-      margin-left: 10px;
-      display: inline;
-      float: left;
-      margin-top: 4px;
-    }
+      &__user {
+        font-size: 16px;
+        font-weight: bold;
+        color: $comment_color;
+        display: inline;
+        float: left;
+      }
 
-    &__image {
-      height: 200px;
-      padding: 10px 0px;
-      display: block;
-      clear: both;
-    }
+      &__date {
+        font-size: 12px;
+        color: $light-gray;
+        margin-left: 10px;
+        display: inline;
+        float: left;
+        margin-top: 4px;
+      }
 
-    &__content {
-      font-size: 14px;
-      color: $comment_color;
-      padding: 10px 0px 10px 0px;
-      clear: both;
+      &__image {
+        height: 200px;
+        padding: 10px 0px;
+        display: block;
+        clear: both;
+      }
+
+      &__content {
+        font-size: 14px;
+        color: $comment_color;
+        padding: 10px 0px 10px 0px;
+        clear: both;
+      }
     }
   }
 

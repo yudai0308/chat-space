@@ -1,9 +1,10 @@
-%p.message-contents__user= message.user.name
-%p.message-contents__date= message.created_at
-- if message.image.present? == true && message.content.present? == false
-  %img.message-contents__image{src: "#{message.image}"}
-- elsif message.image.present? == false && message.content.present? == true
-  %p.message-contents__content= message.content
--else
-  %img.message-contents__image{src: "#{message.image}"}
-  %p.message-contents__content= message.content
+.each-message
+  %p.each-message__user= message.user.name
+  %p.each-message__date= message.created_at
+  - if message.image.present? == true && message.content.present? == false
+    %img.each-message__image{src: "#{message.image}"}
+  - elsif message.image.present? == false && message.content.present? == true
+    %p.each-message__content= message.content
+  -else
+    %img.each-message__image{src: "#{message.image}"}
+    %p.each-message__content= message.content

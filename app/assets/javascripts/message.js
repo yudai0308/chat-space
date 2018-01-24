@@ -1,18 +1,24 @@
-$(document).on("turbolinks:load", function() {
+$(function() {
   function buildHTML(message) {
     if( message.content && message.image.url ) {
-      var html = `<p class="message-contents__user">${ message.name }</p>
-                  <p class="message-contents__date">${ message.date }</p>
-                  <img class="message-contents__image" src="${message.image.url}"></img>
-                  <p class="message-contents__content">${ message.content }</p>`
+      var html = `<div class="each-message">
+                    <p class="each-message__user">${ message.name }</p>
+                    <p class="each-message__date">${ message.date }</p>
+                    <img class="each-message__image" src="${message.image.url}"></img>
+                    <p class="each-message__content">${ message.content }</p>
+                  </div>`
     } else if( message.image.url == null) {
-        var html = `<p class="message-contents__user">${ message.name }</p>
-                    <p class="message-contents__date">${ message.date }</p>
-                    <p class="message-contents__content">${ message.content }</p>`
+        var html = `<div class="each-message">
+                      <p class="each-message__user">${ message.name }</p>
+                      <p class="each-message__date">${ message.date }</p>
+                      <p class="each-message__content">${ message.content }</p>
+                    </div>`
     } else {
-        var html = `<p class="message-contents__user">${ message.name }</p>
-                    <p class="message-contents__date">${ message.date }</p>
-                    <img class="message-contents__image" src="${message.image.url}"></img>`
+        var html = `<div class="each-message">
+                      <p class="each-message__user">${ message.name }</p>
+                      <p class="each-message__date">${ message.date }</p>
+                      <img class="each-message__image" src="${message.image.url}"></img>
+                    </div>`
     };
     return html;
   };
@@ -43,6 +49,6 @@ $(document).on("turbolinks:load", function() {
       alert("メッセージを入力するか画像を選択してください。");
     });
     var windowHeight = $(".message-contents").get(0).scrollHeight;
-    $(".message-contents").animate({scrollTop: windowHeight}, 200, "swing");
+    $(".message-contents").animate({scrollTop: windowHeight}, 2000, "swing");
   });
 });
