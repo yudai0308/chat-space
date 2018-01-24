@@ -1,4 +1,4 @@
-$(document).on("turbolinks:load", function() {
+$(function() {
   function buildHTML(message) {
     if( message.content && message.image.url ) {
       var html = `<p class="message-contents__user">${ message.name }</p>
@@ -43,6 +43,6 @@ $(document).on("turbolinks:load", function() {
       alert("メッセージを入力するか画像を選択してください。");
     });
     var windowHeight = $(".message-contents").get(0).scrollHeight;
-    $(".message-contents").animate({scrollTop: windowHeight}, 200, "swing");
+    $(".message-contents").animate({scrollTop: windowHeight}, 2000, "swing");
   });
 });
