@@ -4,10 +4,10 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @messages = @group.messages.includes(:user)
-    # respond_to do |format|
-    #   format.html { redirect_to redirect_to group_messages_path(@group) }
-    #   format.json
-    # end
+    respond_to do |format|
+      format.html { render :index }
+      format.json
+    end
   end
 
   def create

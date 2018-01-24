@@ -1,20 +1,20 @@
 $(function() {
   function buildHTML(message) {
     if( message.content && message.image.url ) {
-      var html = `<div class="each-message">
+      var html = `<div class="each-message" data-message-id="${message.id}">
                     <p class="each-message__user">${ message.name }</p>
                     <p class="each-message__date">${ message.date }</p>
                     <img class="each-message__image" src="${message.image.url}"></img>
                     <p class="each-message__content">${ message.content }</p>
                   </div>`
     } else if( message.image.url == null) {
-        var html = `<div class="each-message">
+        var html = `<div class="each-message" data-message-id="${message.id}">
                       <p class="each-message__user">${ message.name }</p>
                       <p class="each-message__date">${ message.date }</p>
                       <p class="each-message__content">${ message.content }</p>
                     </div>`
     } else {
-        var html = `<div class="each-message">
+        var html = `<div class="each-message" data-message-id="${message.id}">
                       <p class="each-message__user">${ message.name }</p>
                       <p class="each-message__date">${ message.date }</p>
                       <img class="each-message__image" src="${message.image.url}"></img>
