@@ -71,7 +71,7 @@ $(function() {
 
     groupMember.push($(this).data("user-id", "user-name"))
     groupMember.forEach(function(mem) {
-      $("#chat-group-users").append(buildHTML(mem));
+      $("#chat-group-users").append(buildMember(mem));
     });
   });
 
