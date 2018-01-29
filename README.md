@@ -27,7 +27,7 @@
 
 ***
 
-## group_userテーブル
+## groupテーブル
 
 |Column|Type|Options|
 |------|----|-------|
